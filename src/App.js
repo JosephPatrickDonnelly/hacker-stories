@@ -1,4 +1,5 @@
 import './App.css';
+
 const welcome = {
   greeting: 'Hey',
   title: 'Joe React',
@@ -41,6 +42,11 @@ const App = () => (
       <hr />
       
       <List />
+     
+      <hr />
+      
+      <List />
+     
      
     </div>
   );
