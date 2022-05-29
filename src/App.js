@@ -49,7 +49,7 @@ const App = () => (
 
 const Search = () => {
   const handleChange = (event) => {
-    console.log(event);
+    console.log(event.target.value);
   }
  return (
     <div>
