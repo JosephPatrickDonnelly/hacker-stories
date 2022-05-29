@@ -37,10 +37,10 @@ const App = () => (
       </h1>
       <h1>My Hacker Stories</h1>
          
-      <Search />
-      
       <hr />
       
+      <Search />
+            
       <List />
      
       <hr />
