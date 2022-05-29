@@ -5,32 +5,32 @@ const welcome = {
   title: 'Joe React',
 };
 
-const list = [
-  {
-    title: 'React',
-    url: 'https://reactjs.org',
-    author: 'Jordan Walke',
-    num_comments: 3,
-    points: 4,
-    objectID: 0,
-  },
-  {
-    title: 'Redux',
-    url: 'https://redux.js.org',
-    author: 'Dan Abramov, Andrew Clark',
-    num_comments: 2,
-    points: 5,
-    objectID: 1
-  }
-];
-
-
-
-function getTitle(title){
+function getTitle(title) {
   return title;
 }
 
-const App = () => (
+const App = () => {
+
+  const stories = [
+    {
+      title: 'React',
+      url: 'https://reactjs.org',
+      author: 'Jordan Walke',
+      num_comments: 3,
+      points: 4,
+      objectID: 0,
+    },
+    {
+      title: 'Redux',
+      url: 'https://redux.js.org',
+      author: 'Dan Abramov, Andrew Clark',
+      num_comments: 2,
+      points: 5,
+      objectID: 1
+    }
+  ]; 
+  
+  return (
     <div>
       <h1>
         {welcome.greeting} {getTitle('Joe React')}!!!
@@ -41,19 +41,19 @@ const App = () => (
       
       <Search />
             
-      <List />
+      <List list={stories}/>
      
       <hr />
       
       <Search />
       
-      <List />
+      <List list={stories}/>
      
       <hr />
      
     </div>
   );
-
+};
 
 const Search = () => (
     <div>
@@ -63,9 +63,9 @@ const Search = () => (
   );
 
 
-const List = () => (
+const List = (props) => (
     <ul>
-        {list.map((item) => {
+        {props.list.map((item) => {
           return (
           <li key={item.objectID}>
             <span>
