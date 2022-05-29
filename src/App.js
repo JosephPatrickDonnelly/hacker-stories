@@ -49,6 +49,7 @@ const App = () => (
       
       <List />
      
+      <hr />
      
     </div>
   );
