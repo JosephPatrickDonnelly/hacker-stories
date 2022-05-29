@@ -45,6 +45,8 @@ const App = () => (
      
       <hr />
       
+      <Search />
+      
       <List />
      
      
