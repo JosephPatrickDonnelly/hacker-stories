@@ -29,8 +29,7 @@ function getTitle(title){
   return title;
 }
 
-const App = () => {
-   return (
+const App = () => (
     <div>
       <h1>
         {welcome.greeting} {getTitle('Joe React')}!!!
@@ -45,19 +44,17 @@ const App = () => {
      
     </div>
   );
-}
 
-const Search = () => {
-  return (
+
+const Search = () => (
     <div>
       <label htmlFor='search'>Search: </label>
       <input id="search" type="text"/>
     </div>
   );
-}
 
-const List = () => {
-  return (
+
+const List = () => (
     <ul>
         {list.map((item) => {
           return (
@@ -73,7 +70,5 @@ const List = () => {
         })}
       </ul>
   );
-}
-
 
 export default App;
