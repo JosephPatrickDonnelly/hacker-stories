@@ -88,7 +88,7 @@ const List = (props) => {
 };
         
 const Item = (props) => {
-  console.log('Item renders');
+  
   return (
           <li key={props.item.objectID}>
             <span>
