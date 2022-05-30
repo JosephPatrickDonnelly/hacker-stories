@@ -1,5 +1,7 @@
 import './App.css';
 
+import React from 'react';
+
 const welcome = {
   greeting: 'Hey',
   title: 'Joe React',
@@ -30,6 +32,7 @@ const App = () => {
     }
   ]; 
   
+  console.log('App renders');
   return (
     <div>
       <h1>
@@ -56,26 +59,38 @@ const App = () => {
 };
 
 const Search = () => {
+  const [searchTerm, setSearchTerm] = React.useState('');
   const handleChange = (event) => {
     console.log(event.target.value);
+    setSearchTerm(event.target.value);
   }
+  console.log('Search renders');
  return (
     <div>
       <label htmlFor='search'>Search: </label>
       <input id="search" type="text" onChange={handleChange}/>
+      
+      <p>
+        Searching for <strong>{searchTerm}</strong>.
+      </p>
     </div>
   );
  };
 
-const List = (props) => (
+const List = (props) => {
+  console.log('List renders');
+  return (
     <ul>
         {props.list.map((item) => (
           <Item key={item.objectID} item={item} />
         ))}
       </ul>
   );
+};
+        
+const Item = (props) => {
 
-const Item = (props) => (
+  return (
           <li key={props.item.objectID}>
             <span>
               <a href={props.item.url}> {props.item.title}</a>
@@ -84,6 +99,6 @@ const Item = (props) => (
             <span> {props.item.num_comments}</span>
             <span>{props.item.points}</span>
           </li>
-);
-  
+  );
+};  
 export default App;
