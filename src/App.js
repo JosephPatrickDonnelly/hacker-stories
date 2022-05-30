@@ -60,7 +60,6 @@ const App = () => {
 const Search = (props) => {
   const [searchTerm, setSearchTerm] = React.useState('');
   const handleChange = (event) => {
-    console.log(event.target.value);
     setSearchTerm(event.target.value);
     props.onSearch(event);
   }
