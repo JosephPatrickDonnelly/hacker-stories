@@ -47,13 +47,7 @@ const App = () => {
       <List list={stories}/>
      
       <hr />
-      
-      <Search />
-      
-      <List list={stories}/>
-     
-      <hr />
-     
+          
     </div>
   );
 };
@@ -89,7 +83,7 @@ const List = (props) => {
 };
         
 const Item = (props) => {
-
+  console.log('Item renders');
   return (
           <li key={props.item.objectID}>
             <span>
