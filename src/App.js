@@ -81,7 +81,6 @@ const List = ({ list}) => {
 };
         
 const Item = ({item}) => {
-  
   return (
           <li key={item.objectID}>
             <span>
